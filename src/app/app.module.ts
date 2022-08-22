@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { UserMessageComponentComponent } from './user-message-component/user-mes
 import { SendMessageComponentComponent } from './send-message-component/send-message-component.component';
 import { ContactListComponentComponent } from './contact-list-component/contact-list-component.component';
 import { ContactComponentComponent } from './contact-component/contact-component.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -24,13 +26,11 @@ import { ContactComponentComponent } from './contact-component/contact-component
     UserMessageComponentComponent,
     SendMessageComponentComponent,
     ContactListComponentComponent,
-    ContactComponentComponent
+    ContactComponentComponent,
+    HighlightDirective,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
