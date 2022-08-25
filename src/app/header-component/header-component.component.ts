@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/user.model';
+import { MessagingDataService } from '../messaging-data.service';
 
 @Component({
   selector: 'app-header-component',
@@ -7,11 +8,13 @@ import { User } from 'src/user.model';
   styleUrls: ['./header-component.component.css'],
 })
 export class HeaderComponentComponent implements OnInit {
-  activeUser : User = {
+  activeUser: User = {
     firstName: 'Maria',
+    isOnline: true,
   };
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 }

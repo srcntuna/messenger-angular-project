@@ -11,6 +11,7 @@ import { MessagingDataService } from '../messaging-data.service';
 })
 export class SendMessageComponentComponent implements OnInit {
   messageString: string;
+  sequenceNumber = 1;
 
   constructor(
     private loggingSvce: LoggingService,
@@ -21,10 +22,16 @@ export class SendMessageComponentComponent implements OnInit {
 
   // use the instance of the logging service in our event handler
   onSendMessage() {
-    this.loggingSvce.log('Send following message: ');
+    let currentUser: User = { firstName: 'Maria', isOnline: true };
+
     this.loggingSvce.log(this.messageString);
-    const sender: User = new User('Sercan', true);
-    const newMessage: Message = new Message(sender, this.messageString, 1, 2);
+    const newMessage: Message = new Message(
+      currentUser,
+      this.messageString,
+      1,
+      this.sequenceNumber
+    );
+    this.sequenceNumber++;
     this.messagingSvce.addUserMessage(newMessage);
   }
 }

@@ -29,7 +29,10 @@
     </div>
     <div class="col-3">
       <div class="float-end">
-        <button class="btn btn-primary">New Message</button>
+        <button class="btn btn-primary" (click)="onNewMessage()">
+          <!-- adding the routerLink directive here -->
+          New Message
+        </button>
       </div>
     </div>
   </div>
