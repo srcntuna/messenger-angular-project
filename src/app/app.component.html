@@ -1,11 +1,7 @@
-<div class="row border">
-  <app-header-component></app-header-component>
-</div>
-
 <div class="container">
   <div class="row">
     <div class="col-12 border p-3">
-      <app-conversation-control-component></app-conversation-control-component>
+      <app-header-component></app-header-component>
     </div>
   </div>
 </div>
@@ -13,15 +9,8 @@
 <div class="container">
   <div class="row">
     <div class="col-12 border p-3">
-      <app-conversation-history-component></app-conversation-history-component>
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-12 border p-3">
-      <app-contact-list-component></app-contact-list-component>
+      <router-outlet></router-outlet>
+      <!-- placing the active component based on the route here -->
     </div>
   </div>
 </div>

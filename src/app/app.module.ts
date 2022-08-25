@@ -18,6 +18,7 @@ import { HighlightDirective } from './highlight.directive';
 import { LoggingService } from './logging.service';
 import { MessagingDataService } from './messaging-data.service';
 import { MessageCountComponentComponent } from './message-count-component/message-count-component.component';
+import { ApplicationComponentComponent } from './application-component/application-component.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { MessageCountComponentComponent } from './message-count-component/messag
     ContactComponentComponent,
     HighlightDirective,
     MessageCountComponentComponent,
+    ApplicationComponentComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [LoggingService, MessagingDataService],

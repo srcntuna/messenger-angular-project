@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Message } from 'src/message.model';
+import { User } from 'src/user.model';
 import { LoggingService } from '../logging.service';
 import { MessagingDataService } from '../messaging-data.service';
 
@@ -21,7 +23,9 @@ export class SendMessageComponentComponent implements OnInit {
   onSendMessage() {
     this.loggingSvce.log('Send following message: ');
     this.loggingSvce.log(this.messageString);
-    // this.messagingSvce.addUserMessage(this.messageString);
+    const sender: User = new User('Sercan', true);
+    const newMessage: Message = new Message(sender, this.messageString, 1, 2);
+    this.messagingSvce.addUserMessage(newMessage);
   }
 }
 

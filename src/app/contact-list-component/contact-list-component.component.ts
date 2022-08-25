@@ -18,6 +18,7 @@ export class ContactListComponentComponent implements OnInit {
   constructor() {
     console.log('displaying all users');
     this.users.map((user: User) => user.firstName);
+    console.log(this.users);
   }
 
   ngOnInit(): void {}
